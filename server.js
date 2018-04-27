@@ -23,6 +23,8 @@ app.get('/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.use(express.static('ui'));
+
 var articles = {
     'article-one': {
       title: 'Article One',
