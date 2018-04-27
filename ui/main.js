@@ -8,4 +8,4 @@ element.innerHTML = 'New value';
 var img=document.getElementById('cat');
 img.onclick = function() {
     img.style.marginleft = '100px';
-}
+};
