@@ -1,5 +1,6 @@
-var express = require('express');
-var morgan = require('morgan');
+//importing software packages/libraries
+var express = require('express'); //creates web server
+var morgan = require('morgan'); //to help output logs of server
 var path = require('path');
 var Pool = require('pg').Pool;
 
@@ -30,6 +31,19 @@ app.get('/test-db',function (req,res) {
             res.send(JSON.stringify(result.rows));
         }
     });
+});
+
+
+app.get('/article-one',function(req, res){
+    res.send('Article 1 requested and will be served here');
+});
+
+app.get('/article-two',function(req, res){
+    res.send('Article 2 requested and will be served here');
+});
+
+app.get('/article-three',function(req, res){
+    res.send('Article 3 requested and will be served here');
 });
 
 app.get('/ui/style.css', function (req, res) {
