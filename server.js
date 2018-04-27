@@ -3,21 +3,21 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
-var config = {
+/*var config = {
     user: 'ishitajaju2016',
     database: 'ishitajaju2016',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env,DB_PASSWORD
 }
-
+*/
 var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+/*
 var pool = new Pool(config);
 app.get('/test-db',function (req,res) {
     //make a select request
@@ -30,7 +30,7 @@ app.get('/test-db',function (req,res) {
             res.send(JSON.stringify(result));
         }
     });
-});
+});*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
