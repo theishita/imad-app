@@ -1,8 +1,9 @@
 //counter
 var button = document.getElementById('counter');
 button.onclick = function(){
+    
     //create a request object
-    var request = XMLHttpRequest();
+    var request = new XMLHttpRequest();
     
     //capture response and store in a var
     request.onreadystatechange = function() {
@@ -16,6 +17,6 @@ button.onclick = function(){
     };
     
     //make the request
-    request.open('GET','ishitajaju2016.imad.hasura-app.io/counter',true);
+    request.open('GET','http://ishitajaju2016.imad.hasura-app.io//counter',true);
     request.send(null);
 }
