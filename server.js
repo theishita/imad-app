@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/', function(req, res, next) {  
+app.get('/main.js', function(req, res, next) {  
     console.log("before redirection");
     res.sendfile('index.html'); 
 });
